@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tytuł do zmiany -->
     <title>Document</title>
+     <!-- Style powinny wylądować w zewnętrznym pliku -->
     <style>
         :root {
             --bg-color: red;
         }
 
         body {
+            /* background-color zamiast backgroundColor */
+            /* błędnę użycie zmiennej: var(--bg-color) */
             backgroundColor: var(bg-color);
+            /*  czcionka nie jest wrzucona do projektu, nie ma również ustawionego typu czcionki alternatywnej */
             font-family: Lato;
         }
 
         div {
+            /* można użyć skróconego zapisu: 2rem 0 */
             margin-top: 2rem;
+            /* literówka */
             margint-bottom: 2rem;
         }
 
@@ -26,12 +33,25 @@
     </style>
 </head>
 <body>
+    <!-- atrybut aria-main nie istnieje -->
     <h1 aria-main="true">Hall of fame</h1>
+    <!-- atrybut className nie istnieje, powinno być użyte class -->
+    <!-- nazwa klasy nie odpowiada temu co będzie tutaj treścią -->
+    <!-- zamiast div mogłby to być element main -->
     <div className="hero">
+        <!-- drugi nagłówek poziomu h1, powinien być 1 na projekt, powinien tutaj być nagłówek h2 -->
+        <!-- interpolacja {heroCount} nie istnieje w HTML, nalezy dodać tę wartość za pomocą JS -->
+        <!-- powinnismy dodać element, gdzie będziemy wrzucać wartość np. span -->
         <h1>Hero count: {heroCount}</h1>
+    <!-- o jeden znacznik ">" za dużo -->
     </div>>
+    <!-- w całej aplikacji brakuje ukazania rekordów bohaterów , przycisk powinien być per bohater a nie jeden na aplikacje-->
+    <!-- addEventListener zamiast onclick jest lepszym rozwiązaniem -->
+    <!-- nie poprawne wrzucenie metody train -->
     <button onclick="Hero.train()">Power Up Hero</button>
 
+    <!-- brak podłączonego javascript za pomocą atrybutu src -->
+    <!-- brak type="module" to zastosowania modułów -->
     <script></script>
 </body>
 </html>
