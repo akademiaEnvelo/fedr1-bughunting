@@ -3,36 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Heroes hall of fame</title>
     <style>
         :root {
-            --bg-color: red;
+            --bg-color: rgb(151, 78, 78);
+            --border-color: black;
         }
 
         body {
-            backgroundColor: var(bg-color);
-            font-family: Lato;
+            background-color: var(--bg-color);
+            font-family: Lato, sans-serif;
         }
 
-        div {
-            margin-top: 2rem;
-            margint-bottom: 2rem;
+        main {
+            margin: 2rem 0;
         }
 
-        .hero {
-            border: 1px solid black;
+        .heroes__container {
+            border: 1px solid var(--border-color);
 
         }
     </style>
 </head>
 <body>
-    <h1 aria-main="true">Hall of fame</h1>
-    <div className="hero">
-        <h1>Hero count: {heroCount}</h1>
-    </div>>
-    <button onclick="Hero.train()">Power Up Hero</button>
-
-    <script></script>
+    <h1>Hall of fame</h1>
+    <main class="heroes__container">
+        <h1>Hero count: <span class="heroes__hero--counter"></span></h1>
+    </main>
+    <script type="module" src="index.js"></script>
 </body>
 </html>
 
